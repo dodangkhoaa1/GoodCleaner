@@ -1,0 +1,671 @@
+/* ===========================================IMPORT FONTS=========================================== */
+@font-face {
+  font-family: 'Proxima Nova A Condensed';
+  src: url('../fonts/Proxima\ Nova\ Condensed\ Regular.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova A';
+  src: url('../fonts/Proxima\ Nova\ Font.otf');
+}
+
+/* ===========================================VARIABLES CSS=========================================== */
+:root {
+  /* ===========================================COLORS=========================================== */
+  --white-color: #FFFFFF;
+  --gray-color: #EDF0F5;
+  --lightblue-color: #637BAD;
+  --blue-color: #02297F;
+  --yellow-color: #E3B45B;
+  /* ===========================================FONT FAMILY=========================================== */
+  --font-Proxima-Nova: 'Proxima Nova A';
+  --font-Proxima-Nova-Condensed: 'Proxima Nova A Condensed';
+  /* ===========================================FONT SIZE=========================================== */
+  /* Large Screen  */
+  --text-sm-PC: 24px;
+  --text-md-PC: 32px;
+  --text-lg-PC: 40px;
+  /* Small Screen  */
+  --text-sm-MB: 18px;
+  --text-lg-MB: 24px;
+
+  --header-height: 43.03px;
+}
+
+/* ===========================================BASE=========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ===========================================COMMON=========================================== */
+/* ===========================================background=========================================== */
+.bg-white {
+  background-color: var(--white-color);
+}
+
+.bg-blue {
+  background-color: var(--blue-color);
+}
+
+.bg-lightblue {
+  background-color: var(--lightblue-color);
+}
+
+.bg-gray-opacity-70 {
+  background-color: rgba(238, 241, 246, 0.70);
+}
+
+.bg-gray-opacity-75 {
+  background-color: rgba(237, 240, 245, .75);
+}
+
+.bg-white-opacity-80 {
+  background-color: rgba(255, 255, 255, 0.80);
+}
+
+.bg-gray-opacity-85 {
+  background-color: rgba(237, 240, 245, .85);
+}
+
+/* ===========================================borders=========================================== */
+.border-solid {
+  border-style: solid;
+}
+
+.border-lightblue {
+  border-color: var(--lightblue-color);
+}
+
+/* ===========================================filter=========================================== */
+.drop-shadow-top {
+  filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.box-shadow-top {
+  box-shadow: -4px -6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================================flex box=========================================== */
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* ===========================================layout=========================================== */
+/* display  */
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* position  */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.sticky {
+  position: sticky;
+}
+
+/* top right bottom left  */
+.top-0 {
+  top: 0;
+}
+
+/* z-index  */
+.z-99 {
+  z-index: 99;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+/* ===========================================sizing=========================================== */
+.w-full {
+  width: 100%;
+}
+
+/* ===========================================typography=========================================== */
+/* font family  */
+.font-Proxima-Nova-A {
+  font-family: var(--font-Proxima-Nova), Helvetica;
+}
+
+.font-Proxima-Nova-A-Condensed {
+  font-family: var(--font-Proxima-Nova-Condensed), Helvetica;
+}
+
+/* font weight  */
+.font-400 {
+  font-weight: 400;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-700 {
+  font-weight: 700;
+}
+
+.font-900 {
+  font-weight: 900;
+}
+
+/* text align  */
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* text color  */
+.text-blue {
+  color: var(--blue-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-white-opacity-80 {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+/* text transform  */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ===========================================effects=========================================== */
+.after\:absolute::after {
+  position: absolute;
+}
+
+.after\:bot-0::after {
+  bottom: 0;
+}
+
+.after\:left-0::after {
+  left: 0;
+}
+
+.after\:right-0::after {
+  right: 0;
+}
+
+.after\:content-empty::after {
+  content: "";
+}
+
+.after\:height-30p::after {
+  height: 30%;
+}
+
+.after\:bg-gradient-toBottom-faded::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* ===========================================hover=========================================== */
+/* font weight */
+.hover\:font-700:hover {
+  font-weight: 700;
+}
+
+/* text color  */
+.hover\:text-yellow:hover {
+  color: var(--yellow-color);
+}
+
+/* background color  */
+.hover\:bg-white:hover {
+  background-color: var(--white-color);
+}
+
+/* ===========================================SMALL SCREEN=========================================== */
+@media screen and (max-width: 768px) {
+
+  /* ===========================================borers=========================================== */
+  /* color  */
+  .sm\:border-lightblue {
+    border-color: var(--lightblue-color);
+  }
+
+  /* color  */
+  .sm\:border-blue {
+    border-color: var(--blue-color);
+  }
+
+  /* style  */
+  .sm\:border-solid {
+    border-style: solid;
+  }
+
+  /* border width  */
+  .sm\:border {
+    border-width: 1px;
+  }
+
+  .sm\:border-1\.5px {
+    border-width: 1.5px;
+  }
+
+  /* border radius  */
+  .sm\:rounded-1\.25rem {
+    border-radius: 1.25rem;
+  }
+
+  .sm\:rounded-2\.5rem {
+    border-radius: 2.5rem;
+  }
+
+  .sm\:rounded-top-1\.25rem {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+  }
+
+  /* ===========================================background=========================================== */
+  .sm\:bg-blue {
+    background-color: var(--blue-color);
+  }
+
+  /* ===========================================cursor=========================================== */
+  .sm\:pointer {
+    cursor: pointer;
+  }
+
+  /* ===========================================effect=========================================== */
+  .sm\:after\:height-30p::after {
+    height: 30%;
+  }
+
+  /* ===========================================flex box=========================================== */
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:flex-1 {
+    flex: 1;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  /* gap  */
+  .sm\:gap-1\.5rem {
+    gap: 1.5rem;
+  }
+
+  .sm\:gap-1\.81rem {
+    gap: 1.81rem;
+  }
+
+  .sm\:gap-2\.25rem {
+    gap: 2.25rem;
+  }
+
+  .sm\:gap-3rem {
+    gap: 3rem;
+  }
+
+  /* ===========================================layout=========================================== */
+  /* display  */
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  /* position  */
+  .sm\:fixed {
+    position: fixed;
+  }
+
+  .sm\:absolute {
+    position: absolute;
+  }
+
+  .sm\:z-1{
+    z-index: 1;
+  }
+  .sm\:z-2{
+    z-index: 1;
+  }
+  .sm\:z-3{
+    z-index: 1;
+  }
+  .sm\:z-100 {
+    z-index: 100;
+  }
+
+  /* top right bottom left  */
+  /* top  */
+  .sm\:top-0 {
+    top: 0;
+  }
+
+  .sm\:top-37p {
+    top: 37%;
+  }
+
+  .sm\:top-80p {
+    top: 80%;
+  }
+
+  /* right  */
+  .sm\:right-0 {
+    right: 0;
+  }
+
+  /* bottom  */
+  .sm\:bottom-10p {
+    bottom: 10%;
+  }
+
+  /* left  */
+  .sm\:left-0 {
+    left: 0;
+  }
+
+  /* ===========================================sizing=========================================== */
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:w-11p {
+    width: 11%;
+  }
+
+  .sm\:w-3\.3125rem {
+    width: 3.3125rem;
+  }
+
+  .sm\:w-4\.0625rem {
+    width: 4.0625rem;
+  }
+
+  .sm\:w-4\.875rem {
+    width: 4.875rem;
+  }
+
+  .sm\:w-9\.9375rem {
+    width: 9.9375rem;
+  }
+
+  .sm\:h-full {
+    height: 100vh;
+  }
+
+  .sm\:h-0\.125rem {
+    height: .125rem;
+  }
+
+  /* ===========================================spacing=========================================== */
+  /* padding top  */
+  .sm\:pt-\.75rem {
+    padding-top: .75rem;
+  }
+
+  .sm\:pt-1\.38rem {
+    padding-top: 1.38rem;
+  }
+
+  .sm\:pt-2\.31rem {
+    padding-top: 2.31rem;
+  }
+
+  .sm\:pt-2\.52rem {
+    padding-top: 2.52rem;
+  }
+
+  .sm\:pt-2\.62rem {
+    padding-top: 2.62rem;
+  }
+
+  .sm\:pt-3\.44rem {
+    padding-top: 3.44rem;
+  }
+
+  .sm\:pt-4\.94rem {
+    padding-top: 4.94rem;
+  }
+
+  /* padding right  */
+  .sm\:pr-\.63rem {
+    padding-right: .63rem;
+  }
+
+  .sm\:pr-2\.38rem {
+    padding-right: 2.38rem;
+  }
+
+  .sm\:pr-2\.94rem {
+    padding-right: 2.94rem;
+  }
+
+  .sm\:pr-3rem {
+    padding-right: 3rem;
+  }
+
+  .sm\:pr-3\.88rem {
+    padding-right: 3.88rem;
+  }
+
+  /* padding bottom  */
+  .sm\:pb-0\.69rem {
+    padding-bottom: .69rem;
+  }
+
+  .sm\:pb-0\.75rem {
+    padding-bottom: .75rem;
+  }
+
+  .sm\:pb-0\.9275rem {
+    padding-bottom: .9275rem;
+  }
+
+  .sm\:pb-1\.8rem {
+    padding-bottom: 1.8rem;
+  }
+
+  .sm\:pb-2\.11rem {
+    padding-bottom: 2.11rem;
+  }
+
+  .sm\:pb-3\.38rem {
+    padding-bottom: 3.38rem;
+  }
+
+  .sm\:pb-5rem {
+    padding-bottom: 5rem;
+  }
+
+  /* padding left  */
+  .sm\:pl-\.56rem {
+    padding-left: .56rem;
+  }
+
+  .sm\:pl-2\.44rem {
+    padding-left: 2.44rem;
+  }
+
+  .sm\:pl-2\.87rem {
+    padding-left: 2.87rem;
+  }
+
+  .sm\:pl-3\.56rem {
+    padding-left: 3.56rem;
+  }
+
+  .sm\:pl-3\.81rem {
+    padding-left: 3.81rem;
+  }
+
+  /* padding x = padding left and padding right  */
+  .sm\:px-1\.31rem {
+    padding-left: 1.31rem;
+    padding-right: 1.31rem;
+  }
+
+  .sm\:px-1\.38rem {
+    padding-left: 1.38rem;
+    padding-right: 1.38rem;
+  }
+
+  .sm\:px-1\.75rem {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .sm\:px-2\.56rem {
+    padding-left: 2.56rem;
+    padding-right: 2.56rem;
+  }
+
+  /* padding y = padding top and padding bottom  */
+  .sm\:py-1\.31rem {
+    padding-top: 1.31rem;
+    padding-bottom: 1.31rem;
+  }
+
+  .sm\:py-1\.37rem {
+    padding-top: 1.37rem;
+    padding-bottom: 1.37rem;
+  }
+
+  .sm\:py-3\.4rem {
+    padding-top: 3.4rem;
+    padding-bottom: 3.4rem;
+  }
+
+  .sm\:m-auto {
+    margin: auto;
+  }
+
+  /* margin x = margin left and margin right  */
+  .sm\:mx-1\.31rem {
+    margin-left: 1.31rem;
+    margin-right: 1.31rem;
+  }
+
+  /* margin top  */
+  .sm\:mt-1\.69rem {
+    margin-top: 1.69rem;
+  }
+
+  .sm\:mt-1\.81rem {
+    margin-top: 1.81rem;
+  }
+
+  .sm\:mt-3\.56rem {
+    margin-top: 3.56rem;
+  }
+
+  .sm\:mt-2\.94rem {
+    margin-top: 2.94rem;
+  }
+
+  /* margin left  */
+  .sm\:ml-0\.37rem {
+    margin-left: .37rem;
+  }
+
+  .sm\:ml-0\.56 {
+    margin-left: .56rem;
+  }
+
+  .sm\:ml-1 {
+    margin-left: 1rem;
+  }
+
+  /* margin bottom  */
+  .sm\:mb-1\.44rem {
+    margin-bottom: 1.44rem;
+  }
+
+  /* ===========================================typography=========================================== */
+  /* font size  */
+  .sm\:text-sm {
+    font-size: var(--text-sm-MB);
+  }
+
+  .sm\:text-lg {
+    font-size: var(--text-lg-MB);
+  }
+
+  /* text align  */
+  .sm\:text-center {
+    text-align: center;
+  }
+
+  /* text color  */
+  .sm\:text-white {
+    color: var(--white-color);
+  }
+}
+
+/* ===========================================MEDIUM SCREEN=========================================== */
+@media screen and (min-width: 769px) {
+    .md\:hidden{
+      display: none;
+    }
+}
+
+/* ===========================================LARGE SCREEN=========================================== */
+@media screen and (min-width: 1454px) {}
